@@ -33,14 +33,14 @@ findFormSnackbar.addEventListener('submit', (e) => {
 promise 
     .then(value => {
         iziToast.success({
-            message: value,
+            message: `✅ Fulfilled promise in ${delay}ms`,
             messageColor: 'white',
             position: 'topRight',
             
         });})
     .catch(value => {
         iziToast.error({
-            message: value,
+            message: `❌ Rejected promise in ${delay}ms`,
             messageColor: 'white',
             position: 'topRight',
         });
