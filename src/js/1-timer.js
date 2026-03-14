@@ -17,7 +17,7 @@ const options = {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
-    if (selectedDates[0] < new Date()) {
+    if (selectedDates[0] <= new Date()) {
         iziToast.show({
           message: 'Please choose a date in the future',
           messageColor: 'white',
@@ -89,7 +89,6 @@ startBtn.addEventListener('click', () => {
 
     if (diff < 1000) {
       clearInterval(intervalId);
-      startBtn.disabled = false;
       findForm.disabled = false;
       f.set('clickOpens', true);
 

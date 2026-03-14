@@ -21,10 +21,10 @@ findFormSnackbar.addEventListener('submit', (e) => {
     const promise = new Promise((resolve, reject) => {
         setTimeout(() => {
             if (success) {
-                resolve(`✅ Fulfilled promise in ${delay}ms`);
+                resolve(delay);
             }
             else {
-                reject(`❌ Rejected promise in ${delay}ms`);
+                reject(delay);
             }
 
         }, delay)
